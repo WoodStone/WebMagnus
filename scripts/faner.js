@@ -1,6 +1,3 @@
-/**
- * Created by Emil on 03.11.2015.
- */
 //<![CDATA[
 
 var tabLinks = new Array();
