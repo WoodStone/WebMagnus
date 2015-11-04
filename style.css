@@ -346,16 +346,23 @@ ul#faner li a.selected{
     padding: 0.7em 0.3em 0.38em 0.3em;
 }
 
-ul.faneInnhold{
+table.faneInnhold{
     border: 1px solid #c9c3ba;
+    border-top: #f1f0ee;
     padding: 0.5em;
     background-color: #f1f0ee;
-}
-ul.faneInnhold li{
-    list-style-type: none;
+    width: 100%;
 }
 
-ul.faneInnhold.hide{
+table.faneInnhold td, tr{
+    height: 50px;
+    text-align: center;
+    vertical-align: middle;
+    padding: 15px;
+    border: 1px solid #c9c3ba;
+}
+
+table.faneInnhold.hide{
     display: none;
 }
 /* SLUTT CSS til kamper.html */
