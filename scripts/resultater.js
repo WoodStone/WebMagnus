@@ -1,20 +1,15 @@
 /**
  * Created by Emil on 03.11.2015.
- *
- * Linje 11: Funksjonen lastInnfil() laster inn en fil fra en iframe som ligger i kamper.html
- * Linje 14: Splitter filen opp i liste av kamper
- * Linje 16: For-løkke som itererer gjennom hver kamp
- * Linje 17: Splitter hver kamp inn i en liste med data
  */
 
 //START innlasting
 function lastInnFil(){
-    var fil = document.getElementById("fraFil");
-    var filInnhold = fil.contentWindow.document.body.children[0].innerHTML;
+    var fil = document.getElementById("fraFil"); //laster inn en fil fra en iframe som ligger i kamper.html
+    var filInnhold = fil.contentWindow.document.body.children[0].innerHTML; //Splitter filen opp i liste av kamper
     var kamper = filInnhold.split("\n");
 
-    for(var i = 0; i<kamper.length; i++){
-        var kamp = kamper[i].split(","); //
+    for(var i = 0; i<kamper.length; i++){ //For-løkke som itererer gjennom hver kamp
+        var kamp = kamper[i].split(","); // Splitter hver kamp inn i en liste med data
         /**
          * kamp[0] = startdato og tidspunkt
          * kamp[1] = slutt
