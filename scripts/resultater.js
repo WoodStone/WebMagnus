@@ -22,9 +22,11 @@ function lastInnFil(){
          */
 
         var listElement = document.createElement('LI'); //Lager <li>-element
-        listElement.appendChild(document.createTextNode(kamp.join()));
+        var start = kamp[0].substring(0, kamp[0].length-3);
+        //listElement.appendChild(document.createTextNode(kamp.join()));
+        listElement.appendChild(document.createTextNode(start));
         // Til sammenligning av datoer:
-        var slutt = kamp[0].split('-'); //[0] = år, [1] = måned, [2] = dag, [3] = time
+        var slutt = kamp[1].split('-'); //[0] = år, [1] = måned, [2] = dag, [3] = time
         for(var x = 0; x<slutt.length; x++){
             slutt[x] = parseInt(slutt[x], 10); //Konverterer alle elementene i arrayet til integers
         }
