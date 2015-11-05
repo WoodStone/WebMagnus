@@ -292,3 +292,77 @@ body {
   /* Set the fixed height of the footer here */
   height: 36px;
 }
+
+/* START CSS til kamper.html */
+
+.faneInnhold{
+
+}
+
+#kommende{
+
+}
+
+#resultater{
+
+}
+
+ul#faner{
+    list-style-type: none;
+    margin: 30px 0 0 0;
+    padding: 0 0 0.3em 0;
+}
+
+ul#faner li{
+    display: inline;
+    border-radius: 100%;
+}
+
+ul#faner li a{
+    color: #42454a;
+    background-color: #dedbde;
+    border: 1px solid #c9c3ba;
+    border-bottom: none;
+    padding: 0.3em;
+    text-decoration: none;
+
+    /* ROund out corners */
+    -webkit-border-top-left-radius: 15px;
+    -webkit-border-top-right-radius: 15px;
+    -moz-border-radius-topleft: 15px;
+    -moz-border-radius-topright: 15px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+ul#faner li a:hover{
+    background-color: #f1f0ee;
+}
+
+ul#faner li a.selected{
+    color: #000;
+    background-color: #f1f0ee;
+    font-weight: bold;
+    padding: 0.7em 0.3em 0.38em 0.3em;
+}
+
+table.faneInnhold{
+    border: 1px solid #c9c3ba;
+    border-top: #f1f0ee;
+    padding: 0.5em;
+    background-color: #f1f0ee;
+    width: 100%;
+}
+
+table.faneInnhold td, tr{
+    height: 50px;
+    text-align: center;
+    vertical-align: middle;
+    padding: 15px;
+    border: 1px solid #c9c3ba;
+}
+
+table.faneInnhold.hide{
+    display: none;
+}
+/* SLUTT CSS til kamper.html */
