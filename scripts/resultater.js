@@ -39,7 +39,6 @@ function lastInnFil(){
         var parsed = [kamp[0].substring(0, kamp[0].length-3)]; //dato
         parsed.push(a); // link
 
-
         if(sluttDate > now){
             //legg til under kommende kamper
             //document.getElementById("kommende").appendChild(a);
