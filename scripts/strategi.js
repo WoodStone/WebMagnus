@@ -18,17 +18,6 @@ var h = {
 };
 var brettimg = src + 'brett.png';
 
-var testbrett = [
-    [s.t, s.h, s.l, s.d, s.k, s.l, s.h, s.t],
-    [s.b, s.b, s.b, s.b, s.b, s.b, s.b, s.b],
-    [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0],
-    [h.b, h.b, h.b, h.b, h.b, h.b, h.b, h.b],
-    [h.t, h.h, h.l, h.d, h.k, h.l, h.h, h.t]
-];
-
 var passant = [
     [
         [s.t, s.h, s.l, s.d, s.k, s.l, s.h, s.t],
@@ -262,7 +251,7 @@ var mattkongetarn = [
 ];
 
 
-
+//Laster inn de forskjellige brettene og animasjonene
 onload = function() {
 
     loadBrett('passant', passant);
@@ -272,6 +261,10 @@ onload = function() {
 
 };
 
+/*
+Laster inn en liste, 'brett_a' med brett representert med matriser,
+til den spesifike tag-en med id 'section'.
+*/
 function loadBrett(section, brett_a) {
     var brett = brett_a[0];
     var brett_section = document.createElement('canvas');
@@ -309,6 +302,13 @@ function loadBrett(section, brett_a) {
     document.getElementById(section).appendChild(brett_section);
 }
 
+/*
+Rekursiv funksjon som viser animasjonen til et brett.
+Funksjonen tar inn et canvas objekt, 'self', en liste
+med brett, 'brett_a', og dypden til rekursjonen, 'step'.
+Det rekursive kallet vil stoppe når dypden er lik antall
+elementer i 'brett_a'.
+ */
 function animated(self, brett_a, step) {
     var ctx = self.getContext('2d');
     var brett = brett_a[step];
