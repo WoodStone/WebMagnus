@@ -1,7 +1,9 @@
-/* Brikkene */
-/* Endrer innholdet i div-boksen "brikker" etter hvilken knapp som er trykket.*/
-
-/*Laget av Tord Austad*/
+/*
+FILNAVN: brikkene.js
+LAGET AV: Tord Austad
+NÅR: November 2015
+MÅL: Endrer innholdet i div-boksen "brikker" i brikkene.html etter hvilken knapp som er trykket.
+*/
 
 window.onload = function () {
 	document.getElementById('konge').addEventListener('click',function (){show("0")});

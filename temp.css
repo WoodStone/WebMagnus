@@ -1,3 +1,4 @@
+/* Størrelse på knapper, illustrasjoner av bevegelser og høyden av infoboksen ved forskjellige bredder */
 @media (max-width: 767px){
   #brikkediv img {
     width: 250px;
@@ -56,11 +57,14 @@
     height: 850px;
   }
 }
+/* Slutt på varierende bredde for knapper og bilder */
 
+/* Sentrerer h3. Kunne brukt .textcenter i scriptet i stedet, men denne måten blir mer ryddig */
 #brikkeinfo h3 {
   text-align: center;
 }
 
+/* Fjerner border rundt knappene */
 #noborderinput input {
   border: none;
   outline: none;

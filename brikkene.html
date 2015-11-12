@@ -1,27 +1,38 @@
 <!DOCTYPE html>
+<!--
+FILNAVN: brikkene.html
+LAGET AV: Tord Austad
+NÅR: November 2015
+MÅL: Gi informasjon om hver sjakkbrikke
+-->
+
 <html>
   <head>
+    <!-- Frameworks -->
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="temp.css">
-    <script src="scripts/brikkene.js"></script>
-
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-
     <!-- Latest compiled JavaScript -->
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <!-- Google Open Font -->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-    <meta charset="utf-8">
 
+    <!-- Selvlagde skript og style -->
+    <!-- Style-regler -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="temp.css">
+    <!-- Skript brukt på denne siden -->
+    <script src="scripts/brikkene.js"></script>
+
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Brikkene</title>
   </head>
   <body>
 
-    <!-- Fixed navbar -->
+    <!-- Modifisert bootstrap navbar -->
     <nav class="navbar navbar-inverse navbar-fixed-top shadow3">
       <div class="container">
         <div class="navbar-header">
@@ -31,6 +42,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
+          <!-- div-boksen x767 er usynlig hvis siden er under 768px width -->
           <div class="x767">
             <a class="navbar-brand" href="#">Neste Carlsen-kamp</a>
           </div>
@@ -42,30 +54,30 @@
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Magnus Carlsen<span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><a href="mal_2.html">Om Carlsen</a></li>
-                <li><a href="mal_2.html">Prestasjoner</a></li>
-                <li><a href="mal_2.html">Motstandere</a></li>
-                <li><a href="mal_2.html">Team Carlsen</a></li>
+                <li><a href="om.html">Om Carlsen</a></li>
+                <li><a href="prestasjoner.html">Prestasjoner</a></li>
+                <li><a href="motstandere.html">Motstandere</a></li>
+                <li><a href="team.html">Team Carlsen</a></li>
               </ul>
             </li>
-            <li><a href="mal_2.html">Kamper</a></li>
+            <li><a href="kamper.html">Kamper</a></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Spillet sjakk <span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><a href="mal_2.html">Lær å spille sjakk</a></li>
-                <li class="active"><a href="mal_2.html">Bli kjent med brikkene</a></li>
-                <li><a href="mal_2.html">Ord og uttrykk</a></li>
-                <li><a href="mal_2.html">Enkel strategi</a></li>
-                <li><a href="mal_2.html">Vil du vite mer?</a></li>
+                <li><a href="laersjakk.html">Lær å spille sjakk</a></li>
+                <li class="active"><a href="brikkene.html">Bli kjent med brikkene</a></li>
+                <li><a href="ord.html">Ord og uttrykk</a></li>
+                <li><a href="strategi.html">Enkel strategi</a></li>
+                <li><a href="vitemer.html">Vil du vite mer?</a></li>
               </ul>
             </li>
-            <li><a href="mal_2.html">Om</a></li>
+            <li><a href="om.html">Om</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
     </nav>
 
-    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <!-- Bootstrap jumbotron for coverbilde og timer -->
     <div class="jumbocolor">
       <div class="jumbotron headerimg shadow1" title="original image by Wikipedia user Autopilot">
         <p>Carlsen spiller neste kamp om</p>
@@ -73,7 +85,7 @@
       </div>
     </div>
 
-
+    <!-- Start på bootstrap-container med innholdet på siden -->
     <div class="container customcontainer shadow1" role="main">
 
     <div class="row textbox">
@@ -115,9 +127,9 @@
         </p>
       </div>
       <div class="col-md-1">
-
       </div>
     </div>
+    <!-- Sjakkbrikkeknappene -->
     <div class="row" id="noborderinput">
       <div class="col-xs-2">
         <input type="image" id="konge" src="img/king2.png" alt="Konge" title="original image by Wikipedia user Cburnett" />
@@ -138,6 +150,8 @@
         <input type="image" id="bonde" src="img/pawn.png" alt="Bonde" title="original image by Wikipedia user Cburnett" />
       </div>
     </div>
+
+    <!-- Her limer scriptet inn HTML-kode etter hvilken knapp som er trykket. Konge er åpnet når siden lastes. -->
     <div id="brikkediv">
     <div class="row">
       <div class="col-xs-1">
@@ -160,8 +174,9 @@
       </div>
     </div>
   </div>
-    </div> <!-- /container -->
-
+    </div>
+    <!-- /container -->
+    <!-- Sticky footer -->
     <footer class="footer">
       <div class="container textcenter">
         <p class="text-muted">Laget av WEBTEK gruppe # høst 2015</p>
