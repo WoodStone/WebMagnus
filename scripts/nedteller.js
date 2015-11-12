@@ -17,10 +17,8 @@
    **** Viss felt nr 1 er i framtida -> Vis kor lenge det er til
    **** Unntak: Viss linja er tom -> Vis ingenting
 
-   Corner caser:
+   Corner case:
    * kamper.txt endres på server.  Håndteres ikkje.
-   * Felt nr 1 blir plutselig now().  Endrer til Turnering pågår med link.
-   * Felt nr 2 blir plutselig i fortida.  Håndteres ikkje.
 
    Datoformattering: 
    * "66d 12t 45m 23s". 
@@ -153,3 +151,4 @@ function displayNextGame () {
     return true;
 }
 
+displayNextGame ();
