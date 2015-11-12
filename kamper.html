@@ -1,3 +1,10 @@
+<!--
+FILE NAME: kamper.html
+WRITTEN BY: Emil O. Kollstrøm, TEMPLATE: Tord Austad
+WHEN: 3.11.2015
+PURPOSE: Vise oversikt over kommende kamper og tidligere resultater
+-->
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,15 +23,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Kamper</title>
-    <--! faner-javascriptet er hentet fra http://www.elated.com/articles/javascript-tabs/ -->
+    <--!
+    Faner-javascriptet er hentet fra http://www.elated.com/articles/javascript-tabs/
+    Scriptet lager faner i nettsiden.
+    -->
     <script type="text/javascript">
         //<![CDATA[
-
-        var tabLinks = new Array();
-        var contentDivs = new Array();
-
+        var tabLinks = [];
+        var contentDivs = [];
         function init() {
-
             // Grab the tab links and content divs from the page
             var tabListItems = document.getElementById('faner').childNodes;
             for ( var i = 0; i < tabListItems.length; i++ ) {
@@ -55,7 +62,6 @@
                 i++;
             }
         }
-
         function showTab() {
             var selectedId = getHash( this.getAttribute('href') );
 
@@ -70,7 +76,6 @@
                     contentDivs[id].className = 'faneInnhold hide';
                 }
             }
-
             // Stop the browser following the link
             return false;
         }
@@ -80,12 +85,10 @@
                 if ( element.childNodes[i].nodeName == tagName ) return element.childNodes[i];
             }
         }
-
         function getHash( url ) {
             var hashPos = url.lastIndexOf ( '#' );
             return url.substring( hashPos + 1 );
         }
-
         //]]></script>
 </head>
 <body onload="init()">
@@ -138,7 +141,7 @@
 <div class="jumbocolor">
     <div class="jumbotron headerimg shadow1">
         <p>Carlsen spiller neste kamp om</p>
-        <h1>22d 12t 19min 53s</h1>
+        <h1 id="nedteller"></h1>
     </div>
 </div>
 
@@ -199,7 +202,8 @@
 <!-- Lagrer referansen til kamper.txt i en iframe. NB: src kan ikke være relativ, hvis ikke server er den samme blir den blokket av security -->
 
 <iframe id="fraFil" src="http://folk.ntnu.no/emilok/WebMagnus/data/kamper.txt" onload="lastInnFil();" style="display: none;"></iframe>
-<!-- Parser data med resultater.js-->
+<!-- Parser data og legger det til i riktig fane med resultater.js-->
 <script src="scripts/resultater.js"></script>
+<script src="scripts/nedteller.js"></script>
 </body>
 </html>
