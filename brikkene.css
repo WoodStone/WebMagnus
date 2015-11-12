@@ -1,3 +1,10 @@
+/*
+FILNAVN: brikkene.css
+LAGET AV: Tord Austad
+NÅR: November 2015
+MÅL: Style-regler for brikkene.html
+*/
+
 /* Størrelse på knapper, illustrasjoner av bevegelser og høyden av infoboksen ved forskjellige bredder */
 @media (max-width: 767px){
   #brikkediv img {
