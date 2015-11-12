@@ -1,0 +1,67 @@
+@media (max-width: 767px){
+  #brikkediv img {
+    width: 250px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+  #konge, #dronning, #tarn, #loper, #springer, #bonde {
+    width: 80px;
+    padding-top: 25px;
+  }
+  #brikkediv {
+    min-height: 710px;
+  }
+}
+@media (min-width: 768px){
+  #brikkediv img {
+    width: 300px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+  #konge, #dronning, #tarn, #loper, #springer, #bonde {
+    width: 100px;
+    padding-top: 35px;
+  }
+  #brikkediv {
+    height: 710px;
+  }
+}
+
+@media (min-width: 992px){
+  #brikkediv img {
+    width: 400px;
+    padding-top: 35px;
+    padding-bottom: 35px;
+  }
+  #konge, #dronning, #tarn, #loper, #springer, #bonde {
+    width: 120px;
+    padding-top: 55px;
+  }
+  #brikkediv {
+    height: 770px;
+  }
+}
+
+@media (min-width: 1200px){
+  #brikkediv img {
+    width: 500px;
+    padding-top: 35px;
+    padding-bottom: 35px;
+  }
+  #konge, #dronning, #tarn, #loper, #springer, #bonde {
+    width: 180px;
+    padding-top: 55px;
+  }
+  #brikkediv {
+    height: 850px;
+  }
+}
+
+#brikkeinfo h3 {
+  text-align: center;
+}
+
+#noborderinput input {
+  border: none;
+  outline: none;
+}
