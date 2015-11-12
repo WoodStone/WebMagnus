@@ -122,11 +122,11 @@ function reallyDisplayNextGame ( allTheGames ) {
             var startDateDiff = getDateDiff( now.getTime(), startDate.getTime() )
             if ( startDateDiff > 0 ) {
                 // Er startdato i framtida?
-                document.getElementById("test1").innerHTML = splitDate(startDateDiff);
+                document.getElementById("nedteller").innerHTML = splitDate(startDateDiff);
                 break;
             } else {
                 // Eller har denne matchen starta?
-                document.getElementById("test1").innerHTML = '<a href="' + gameUrl + '">Turnering pågår</a>';
+                document.getElementById("nedteller").innerHTML = '<a href="' + gameUrl + '">Turnering pågår</a>';
                 break;
             }
         }
