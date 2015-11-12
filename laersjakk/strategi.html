@@ -4,7 +4,11 @@
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="../style.css">
-    <link rel="stylesheet" href="sub.css">
+    <style>
+        section, .brett_section {
+            margin-top: 2em;
+        }
+    </style>
 
     <script src="../scripts/strategi.js"></script>
 
@@ -18,7 +22,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>MAL</title>
+    <title>Strategi</title>
   </head>
   <body>
 
@@ -70,7 +74,7 @@
     <div class="jumbocolor">
       <div class="jumbotron headerimg shadow1">
         <p>Carlsen spiller neste kamp om</p>
-        <h1>22d 12t 19min 53s</h1>
+        <h1 id="nedteller"></h1>
       </div>
     </div>
 
@@ -203,8 +207,8 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="../../dist/js/bootstrap.min.js"></script>
-    <script src="../../assets/js/docs.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="../scripts/nedteller.js"></script>
   </body>
 </html>
