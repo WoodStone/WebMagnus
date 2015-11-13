@@ -1,4 +1,9 @@
-
+/*
+ FILNAVN: strategi.js
+ LAGET AV: Vestein Dahl
+ NÅR: November 2015
+ MÅL: Animasjon av forskjellige strategier.
+ */
 var src = '../img/laersjakk/';
 var s = {
     b: src + 's_bonde.png',
@@ -306,7 +311,7 @@ function loadBrett(section, brett_a) {
 Rekursiv funksjon som viser animasjonen til et brett.
 Funksjonen tar inn et canvas objekt, 'self', en liste
 med brett, 'brett_a', og dypden til rekursjonen, 'step'.
-Det rekursive kallet vil stoppe n�r dypden er lik antall
+Det rekursive kallet vil stoppe n�r dypden er lik antall
 elementer i 'brett_a'.
  */
 function animated(self, brett_a, step) {
