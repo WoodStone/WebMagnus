@@ -124,7 +124,8 @@ function reallyDisplayNextGame ( allTheGames ) {
                 break;
             } else {
                 // Eller har denne matchen starta?
-                document.getElementById("nedteller").innerHTML = '<a href="' + gameUrl + '">Turnering pågår</a>';
+                document.getElementById("nedtellerheading").innerHTML = ' ';
+                document.getElementById("nedteller").innerHTML = '<a href="' + gameUrl + '">&gt;&gt; Turnering pågår &lt;&lt;</a>';
                 break;
             }
         }
