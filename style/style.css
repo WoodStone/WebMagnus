@@ -296,12 +296,7 @@ body {
   float: none;
 }
 
-/* Endrer linkfargen i den lineære sidestrukturen */
 .linear h4 {
-  color: #808080;
-}
-
-.linear a {
   color: #808080;
 }
 
