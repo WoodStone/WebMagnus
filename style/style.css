@@ -254,6 +254,11 @@ body {
   margin: 0;
 }
 
+#nedteller a {
+  color: white;
+  text-decoration: none;
+}
+
 /* Fjerner bootstrap sitt mellomrom mellom jumbotron og container */
 .jumbotron {
   margin-bottom: 0px;
