@@ -232,7 +232,7 @@ body {
   color: #ffffff;
   margin-top: 50px;
   max-width: 1170px;
-  min-height: 180px;
+  height: 180px;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
@@ -248,6 +248,10 @@ body {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
+}
+
+#nedteller {
+  margin: 0;
 }
 
 /* Fjerner bootstrap sitt mellomrom mellom jumbotron og container */
