@@ -296,6 +296,10 @@ body {
   float: none;
 }
 
+.linear h4 {
+  color: #808080;
+}
+
 /* Sticky footer */
 .footer {
   background-color: #ebebeb;
