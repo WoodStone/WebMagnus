@@ -29,7 +29,7 @@
    * Bruk millisekunder sidan 1970-01-01 00:00 (aka getTime()) for utrekning
  */
 
-var dataUrl = "/ebm/IT2805/WebMagnus/data/kamper.txt";
+var dataUrl = "/tordsa/WebMagnus/data/kamper.txt";
 
 /* Returnerer tal med evt 0 foran
    Argumentet er eit tal
