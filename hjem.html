@@ -8,121 +8,130 @@ PURPOSE: Hjem-siden med Twitter og Facebook-feeder.
 <!DOCTYPE html>
 <html>
 <head>
+  <head>
+    <!-- Frameworks -->
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
-
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-
     <!-- Latest compiled JavaScript -->
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <!-- Google Open Font -->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+    <!-- Selvlagde style-regler -->
+    <link rel="stylesheet" href="style/style.css">
+
     <meta charset="utf-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <title>Hjem</title>
-</head>
-<body>
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.5";
-    fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+  </head>
+  <body>
+    <div id="fb-root"></div>
 
-<!-- Fixed navbar -->
-<nav class="navbar navbar-inverse navbar-fixed-top shadow3">
-    <div class="container">
+    <!-- Facebook-widget script -->
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.5";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+    <!-- Modifisert bootstrap navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top shadow3">
+      <div class="container">
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <div class="x767">
-                <a class="navbar-brand" href="#">Neste Carlsen-kamp</a>
-            </div>
-            <div class="x768"></div>
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <!-- div-boksen x767 er usynlig hvis siden er under 768px width -->
+          <div class="x767">
+            <a class="navbar-brand" href="#">Neste Carlsen-kamp</a>
+          </div>
+          <div class="x768"></div>
         </div>
         <div id="navbar" class="navbar-collapse collapse navbar-ex1-collapse">
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="mal_2.html">Hjem</a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Magnus Carlsen<span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="mal_2.html">Om Carlsen</a></li>
-                        <li><a href="mal_2.html">Prestasjoner</a></li>
-                        <li><a href="mal_2.html">Motstandere</a></li>
-                        <li><a href="mal_2.html">Team Carlsen</a></li>
-                    </ul>
-                </li>
-                <li><a href="mal_2.html">Kamper</a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Spillet sjakk <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="mal_2.html">Lær å spille sjakk</a></li>
-                        <li><a href="mal_2.html">Bli kjent med brikkene</a></li>
-                        <li><a href="mal_2.html">Ord og uttrykk</a></li>
-                        <li><a href="laersjakk/strategi.html">Enkel strategi</a></li>
-                        <li><a href="laersjakk/vitemer.html">Vil du vite mer?</a></li>
-                    </ul>
-                </li>
-                <li><a href="mal_2.html">Om</a></li>
-            </ul>
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="hjem.html">Hjem</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Magnus Carlsen<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="carlsen/carlsen.html">Om Carlsen</a></li>
+                <li><a href="carlsen/spill.html">Prestasjoner</a></li>
+                <li><a href="carlsen/motstander.html">Motstandere</a></li>
+                <li><a href="carlsen/team.html">Team Carlsen</a></li>
+              </ul>
+            </li>
+            <li><a href="kamper/kamper.html">Kamper</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Spillet sjakk <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="laersjakk/laersjakk.html">Lær å spille sjakk</a></li>
+                <li><a href="laersjakk/brikkene.html">Bli kjent med brikkene</a></li>
+                <li><a href="laersjakk/uttrykk.html">Ord og uttrykk</a></li>
+                <li><a href="laersjakk/strategi.html">Enkel strategi</a></li>
+                <li><a href="laersjakk/vitemer.html">Vil du vite mer?</a></li>
+              </ul>
+            </li>
+            <li><a href="om/om.html">Om</a></li>
+          </ul>
         </div><!--/.nav-collapse -->
-    </div>
-</nav>
+      </div>
+    </nav>
 
-<!-- Main jumbotron for a primary marketing message or call to action -->
-<div class="jumbocolor">
-    <div class="jumbotron headerimghome shadow1">
+    <!-- Bootstrap jumbotron for coverbilde og timer -->
+    <div class="jumbocolor">
+      <div class="jumbotron headerimghome shadow1">
         <p>Carlsen spiller neste kamp om</p>
         <h1 id="nedteller"></h1>
+      </div>
     </div>
-</div>
 
+    <!-- Start på bootstrap-container med innholdet på siden -->
+    <div class="container customcontainer shadow1" role="main">
 
-<div class="container customcontainer shadow1" role="main">
-
-    <div class="row textbox">
+      <div class="row textbox">
         <div class="col-md-1"></div>
         <div class="col-md-10">
-            <h1 class="textcenter">Finn ut når Magnus Carlsen spiller neste turnering</h1>
-            <p>
-                Hei og velkommen til CarlsensNesteKamp.com! Denne siden er ment for deg som er nyfrelst sjakk-
-                og Magnus Carlsen-fan. Etter VM i sjakk i 2013 var det en sjakk-boom i Norge da Carlsen ble
-                verdensmester etter å ha slått regjerende verdensmester Viswanathan Anand fra India. Denne nettsiden
-                har som mål å gjøre det lett å finne ut når Carlsens neste kamp er, sjekke resultater fra tidligere
-                turneringer, lære seg grunnlegende sjakkregler og strategi og få informasjon om Carlsen som utøver.
-            </p>
+          <h1 class="textcenter">Finn ut når Magnus Carlsen spiller neste turnering</h1>
+          <p>
+            Hei og velkommen til CarlsensNesteKamp.com! Denne siden er ment for deg som er nyfrelst sjakk-
+            og Magnus Carlsen-fan. Etter VM i sjakk i 2013 var det en sjakk-boom i Norge da Carlsen ble
+            verdensmester etter å ha slått regjerende verdensmester Viswanathan Anand fra India. Denne nettsiden
+            har som mål å gjøre det lett å finne ut når Carlsens neste kamp er, sjekke resultater fra tidligere
+            turneringer, lære seg grunnlegende sjakkregler og strategi og få informasjon om Carlsen som utøver.
+          </p>
         </div>
         <div class="col-md-1"></div>
-    </div>
-    <div class="row textbox">
+      </div>
+      <div class="row textbox">
         <div class="col-md-1"></div>
         <div class="col-md-5">
-            <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/MagnusCarlsen" data-widget-id="653552851411714049">Tweets by @MagnusCarlsen</a>
-            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+          <!-- Twitter-widget med script -->
+          <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/MagnusCarlsen" data-widget-id="653552851411714049">Tweets by @MagnusCarlsen</a>
+          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
         </div>
         <div class="col-md-5">
-            <div class="fb-page" data-href="https://www.facebook.com/magnuschess" data-height="600" data-width="520" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false" data-show-posts="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/magnuschess"><a href="https://www.facebook.com/magnuschess">Magnus Carlsen</a></blockquote></div></div>
+          <!-- Facebook-widget -->
+          <div class="fb-page" data-href="https://www.facebook.com/magnuschess" data-height="600" data-width="520" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false" data-show-posts="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/magnuschess"><a href="https://www.facebook.com/magnuschess">Magnus Carlsen</a></blockquote></div></div>
         </div>
         <div class="col-md-1"></div>
+      </div>
     </div>
-</div> <!-- /container -->
-
-<footer class="footer">
-    <div class="container textcenter">
+    <!-- /container -->
+    <!-- Sticky footer -->
+    <footer class="footer">
+      <div class="container textcenter">
         <p class="text-muted">Laget av WEBTEK-gruppe høst 2015</p>
-    </div>
-</footer>
+      </div>
+    </footer>
 
-<script src="scripts/nedteller.js"></script>
+    <!-- Selvlagde skript brukt på denne siden -->
+    <script src="scripts/nedteller.js"></script>
 
 </body>
 </html>

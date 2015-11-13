@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+
 <!--
 FILNAVN: mal.html
 LAGET AV: Tord Austad
@@ -17,11 +19,8 @@ MÅL: Mal brukt som skjelett til resten av html-sidene
     <!-- Google Open Font -->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 
-    <!-- Selvlagde skript og style -->
-    <!-- Style-regler -->
-    <link rel="stylesheet" href="style.css">
-    <!-- Skript brukt på denne siden -->
-    <script src="scripts/.js"></script>
+    <!-- Selvlagde style-regler -->
+    <link rel="stylesheet" href="style/style.css">
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -79,11 +78,11 @@ MÅL: Mal brukt som skjelett til resten av html-sidene
     <div class="jumbocolor">
       <div class="jumbotron headerimg shadow1">
         <p>Carlsen spiller neste kamp om</p>
-        <h1>22d 12t 19min 53s</h1>
+        <h1 id="nedteller"></h1>
       </div>
     </div>
 
-    <!-- Start på bootstrap-container med innholdet på siden -->
+    <!-- Start på bootstrap-container med innholdet til siden -->
     <div class="container customcontainer shadow1" role="main">
 
     <div class="row textbox">
@@ -124,6 +123,11 @@ MÅL: Mal brukt som skjelett til resten av html-sidene
         <p class="text-muted">Laget av WEBTEK-gruppe høst 2015</p>
       </div>
     </footer>
+
+    <!-- Selvlagde skript brukt på denne siden -->
+    <script src="scripts/.js"></script>
+    <script src="scripts/nedteller.js"></script>
+
 
   </body>
 </html>
