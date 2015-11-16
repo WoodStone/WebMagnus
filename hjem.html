@@ -41,49 +41,9 @@ PURPOSE: Hjem-siden med Twitter og Facebook-feeder.
     }(document, 'script', 'facebook-jssdk'));</script>
 
     <!-- Modifisert bootstrap navbar -->
-    <nav class="navbar navbar-inverse navbar-fixed-top shadow3">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <!-- div-boksen x767 er usynlig hvis siden er under 768px width -->
-          <div class="x767">
-            <a class="navbar-brand" href="#">Neste Carlsen-kamp</a>
-          </div>
-          <div class="x768"></div>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse navbar-ex1-collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="hjem.html">Hjem</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Magnus Carlsen<span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="carlsen/carlsen.html">Om Carlsen</a></li>
-                <li><a href="carlsen/spill.html">Prestasjoner</a></li>
-                <li><a href="carlsen/motstander.html">Motstandere</a></li>
-                <li><a href="carlsen/team.html">Team Carlsen</a></li>
-              </ul>
-            </li>
-            <li><a href="kamper/kamper.html">Kamper</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Spillet sjakk <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="laersjakk/laersjakk.html">Lær å spille sjakk</a></li>
-                <li><a href="laersjakk/brikkene.html">Bli kjent med brikkene</a></li>
-                <li><a href="laersjakk/uttrykk.html">Ord og uttrykk</a></li>
-                <li><a href="laersjakk/strategi.html">Enkel strategi</a></li>
-                <li><a href="laersjakk/vitemer.html">Vil du vite mer?</a></li>
-              </ul>
-            </li>
-            <li><a href="om/om.html">Om</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
+    <div id="navbar">
       </div>
-    </nav>
+
 
     <!-- Bootstrap jumbotron for coverbilde og timer -->
     <div class="jumbocolor">
@@ -134,6 +94,8 @@ PURPOSE: Hjem-siden med Twitter og Facebook-feeder.
 
     <!-- Selvlagde skript brukt på denne siden -->
     <script src="scripts/nedteller.js"></script>
+    <script src="scripts/menu.js"></script>
+
 
 </body>
 </html>

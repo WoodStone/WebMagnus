@@ -32,49 +32,8 @@ MÅL: Informasjon om Magnus Carlsen som utøver og liv
 <body>
 
   <!-- Modifisert bootstrap navbar -->
-  <nav class="navbar navbar-inverse navbar-fixed-top shadow3">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <!-- div-boksen x767 er usynlig hvis siden er under 768px width -->
-        <div class="x767">
-          <a class="navbar-brand" href="#">Neste Carlsen-kamp</a>
-        </div>
-        <div class="x768"></div>
-      </div>
-      <div id="navbar" class="navbar-collapse collapse navbar-ex1-collapse">
-        <ul class="nav navbar-nav">
-          <li><a href="../hjem.html">Hjem</a></li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Magnus Carlsen<span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li class="active"><a href="carlsen.html">Om Carlsen</a></li>
-              <li><a href="spill.html">Prestasjoner</a></li>
-              <li><a href="motstander.html">Motstandere</a></li>
-              <li><a href="team.html">Team Carlsen</a></li>
-            </ul>
-          </li>
-          <li><a href="../kamper/kamper.html">Kamper</a></li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Spillet sjakk <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="../laersjakk/laersjakk.html">Lær å spille sjakk</a></li>
-              <li><a href="../laersjakk/brikkene.html">Bli kjent med brikkene</a></li>
-              <li><a href="../laersjakk/uttrykk.html">Ord og uttrykk</a></li>
-              <li><a href="../laersjakk/strategi.html">Enkel strategi</a></li>
-              <li><a href="../laersjakk/vitemer.html">Vil du vite mer?</a></li>
-            </ul>
-          </li>
-          <li><a href="../om/om.html">Om</a></li>
-        </ul>
-      </div><!--/.nav-collapse -->
+  <div id="navbar">
     </div>
-  </nav>
 
   <!-- Bootstrap jumbotron for coverbilde og timer -->
   <div class="jumbocolor">
@@ -88,14 +47,11 @@ MÅL: Informasjon om Magnus Carlsen som utøver og liv
   <div class="container customcontainer shadow1" role="main">
 
     <div class="row textbox">
-      <div class="col-xs-1"></div>
-      <div class="col-xs-4 vcenter">
+      <div class="col-md-1"></div>
+      <div class="col-md-4 vcenter">
         <img src="../img/carlsen/ung.jpg" class="img-rounded" title="Worldchesscup2005" alt="ung">
-
-
-
       </div>
-      <div class="col-xs-6 vcenter">
+      <div class="col-md-6 vcenter">
         <h1 class="textcenter">Om Magnus Carlsen</h1>
         <p> Carlse ble født i 1990 i Tønsberg. Han begynte å lære sjakk i en alder av fem, men viste ikke stor interesse før han så sin eldre søster spiller bra. Etter å oppnå sitt mål om å slå sin søster og deretter far, vokste hans entusiasme for sjakk.</p>
         <p>
@@ -105,7 +61,7 @@ MÅL: Informasjon om Magnus Carlsen som utøver og liv
           Magnus 'ble verdensmesteren i sjakk i november 2013. Han beseiret Viswanathan Anand 6,5-3,5 i Chennai, India. Tjueto år gamle Magnus vant spill 5, 6 og 9 og vant tittelen med et hardt kjempet uavgjort i 10 runde.
         </p>
       </div>
-      <div class="col-xs-1"></div>
+      <div class="col-md-1"></div>
     </div>
     <div class="row linear">
           <div class="col-xs-1"></div>
@@ -127,6 +83,7 @@ MÅL: Informasjon om Magnus Carlsen som utøver og liv
 
   <!-- Selvlagde skript brukt på denne siden -->
   <script src="../scripts/nedteller.js"></script>
+  <script src="../scripts/menu.js"></script>
 
 </body>
 </html>
