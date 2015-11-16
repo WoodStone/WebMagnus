@@ -66,6 +66,23 @@ body {
     }
 }
 
+/*Fjerner Bootstraps standard mobilmeny*/
+.navbar-inverse .navbar-collapse.collapse {
+display: block!important;
+}
+
+.navbar-inverse .navbar-nav>li, .navbar-nav {
+float: left !important;
+}
+
+.navbar-inverse .navbar-nav.navbar-right:last-child {
+margin-right: -15px !important;
+}
+
+.navbar-inverse .navbar-right {
+float: right!important;
+}
+
 
 /* Linker */
 
