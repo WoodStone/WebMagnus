@@ -23,6 +23,7 @@ MÅL: Vise oversikt over kommende kamper og tidligere resultater
   <link rel="stylesheet" href="../style/style.css">
   <link rel="stylesheet" href="../style/kamper.css">
 
+
   <link rel="icon" type="image/ico" href="../img/favicon.ico"/>
 
   <meta charset="utf-8">
@@ -100,49 +101,9 @@ function getHash( url ) {
 </head>
 <body onload="init()">
   <!-- Modifisert bootstrap navbar -->
-  <nav class="navbar navbar-inverse navbar-fixed-top shadow3">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <!-- div-boksen x767 er usynlig hvis siden er under 768px width -->
-        <div class="x767">
-          <a class="navbar-brand" href="#">Neste Carlsen-kamp</a>
-        </div>
-        <div class="x768"></div>
-      </div>
-      <div id="navbar" class="navbar-collapse collapse navbar-ex1-collapse">
-        <ul class="nav navbar-nav">
-          <li><a href="../hjem.html">Hjem</a></li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Magnus Carlsen<span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="../carlsen/carlsen.html">Om Carlsen</a></li>
-              <li><a href="../carlsen/spill.html">Prestasjoner</a></li>
-              <li><a href="../carlsen/motstander.html">Motstandere</a></li>
-              <li><a href="../carlsen/team.html">Team Carlsen</a></li>
-            </ul>
-          </li>
-          <li class="active"><a href="kamper.html">Kamper</a></li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Spillet sjakk <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="../laersjakk/laersjakk.html">Lær å spille sjakk</a></li>
-              <li><a href="../laersjakk/brikkene.html">Bli kjent med brikkene</a></li>
-              <li><a href="../laersjakk/uttrykk.html">Ord og uttrykk</a></li>
-              <li><a href="../laersjakk/strategi.html">Enkel strategi</a></li>
-              <li><a href="../laersjakk/vitemer.html">Vil du vite mer?</a></li>
-            </ul>
-          </li>
-          <li><a href="../om/om.html">Om</a></li>
-        </ul>
-      </div><!--/.nav-collapse -->
-    </div>
-  </nav>
+ <div id="navbar">
+</div>
+
 
   <!-- Bootstrap jumbotron for coverbilde og timer -->
   <div class="jumbocolor">
@@ -200,15 +161,19 @@ function getHash( url ) {
       <p class="text-muted">Laget av WEBTEK-gruppe høst 2015</p>
     </div>
   </footer>
-  <!-- Selvlagde skript brukt på denne siden -->
+
 
   <!-- Hente ut resultater fra kamper.txt-->
   <!-- Lagrer referansen til kamper.txt i en iframe. NB: src kan ikke være relativ, hvis ikke server er den samme blir den blokket av security -->
 
   <iframe id="fraFil" src="http://folk.ntnu.no/tordsa/WebMagnus/data/kamper.txt" onload="lastInnFil();" style="display: none;"></iframe>
   <!-- Parser data og legger det til i riktig fane med resultater.js-->
+
+  <!-- Selvlagde skript brukt på denne siden -->
+  <script src="../scripts/menu.js"></script>
   <script src="../scripts/resultater.js"></script>
   <script src="../scripts/nedteller.js"></script>
+
 
 </body>
 </html>
