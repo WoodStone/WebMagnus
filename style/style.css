@@ -31,6 +31,7 @@ body {
 }
 
 /* START PÅ NAVBAR-REGLER */
+/* Grunnen til alle reglene er fordi det skrives over alle standardverdiene til Bootstrap */
 
 .navbar-inverse {
     background-color: #333333;
@@ -100,34 +101,43 @@ body {
     color: #333333;
     background-color: #ffffff;
 }
+
+/* Active og hover dropdown*/
+ul.dropdown-menu > .active > a {
+    background-color: #808080;
+}
+ul.dropdown-menu > .active > a:hover {
+    background-color: #808080;
+}
+
 /* Opp-ned trekant for dropdown-meny */
 .navbar-inverse .navbar-nav > .dropdown > a .caret {
     border-top-color: #ffffff;
     border-bottom-color: #ffffff;
 }
 .navbar-inverse .navbar-nav > .dropdown > a:hover .caret {
-    border-top-color: #333;
-    border-bottom-color: #333;
+    border-top-color: #333333;
+    border-bottom-color: #333333;
 }
 .navbar-inverse .navbar-nav > .dropdown > a:focus .caret {
-    border-top-color: #333;
-    border-bottom-color: #333;
+    border-top-color: #333333;
+    border-bottom-color: #333333;
 }
 .navbar-inverse .navbar-nav > .open > a .caret {
-    border-top-color: #333;
-    border-bottom-color: #333;
+    border-top-color: #333333;
+    border-bottom-color: #333333;
 }
 .navbar-inverse .navbar-nav > .open > a:hover .caret {
-    border-top-color: #333;
-    border-bottom-color: #333;
+    border-top-color: #333333;
+    border-bottom-color: #333333;
 }
 .navbar-inverse .navbar-nav > .open > a:focus .caret {
-    border-top-color: #555;
-    border-bottom-color: #555;
+    border-top-color: #555555;
+    border-bottom-color: #555555;
 }
 /* Regler for mobilversjonen */
 .navbar-inverse .navbar-toggle {
-    border-color: #DDD;
+    border-color: #DDDDDD;
 }
 .navbar-inverse .navbar-toggle:hover {
     background-color: #484848;
@@ -136,7 +146,7 @@ body {
     background-color: #333333;
 }
 .navbar-inverse .navbar-toggle .icon-bar {
-    background-color: #CCC;
+    background-color: #CCCCCC;
 }
 
 
