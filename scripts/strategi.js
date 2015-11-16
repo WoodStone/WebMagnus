@@ -24,6 +24,7 @@ var h = {
 var brettimg = src + 'brett.png';
 
 var passant = [
+    false,
     [
         [s.t, s.h, s.l, s.d, s.k, s.l, s.h, s.t],
         [s.b, s.b, s.b, s.b, 0, s.b, s.b, s.b],
@@ -67,6 +68,7 @@ var passant = [
 ];
 
 var patt = [
+    false,
     [
         [0, 0, 0, 0, 0, 0, 0, s.k],
         [0, 0, 0, 0, 0, 0, 0, h.b],
@@ -100,6 +102,7 @@ var patt = [
 ];
 
 var kongebondeapning = [
+    false,
     [
         [s.t, s.h, s.l, s.d, s.k, s.l, s.h, s.t],
         [s.b, s.b, s.b, s.b, s.b, s.b, s.b, s.b],
@@ -133,6 +136,7 @@ var kongebondeapning = [
 ];
 
 var mattkongetarn = [
+    false,
     [
         [0, 0, 0, 0, 0, 0, 0, 0],
         [0, 0, 0, 0, 0, 0, 0, 0],
@@ -224,6 +228,16 @@ var mattkongetarn = [
         [0, 0, 0, 0, h.k, 0, 0, 0]
     ],
     [
+        [0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, s.k, 0, 0, 0, 0, h.t],
+        [0, 0, 0, 0, 0, 0, h.t, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, h.k, 0, 0, 0]
+    ],
+    [
         [0, 0, 0, s.k, 0, 0, 0, 0],
         [0, 0, 0, 0, 0, 0, 0, h.t],
         [0, 0, 0, 0, 0, 0, h.t, 0],
@@ -271,13 +285,14 @@ Laster inn en liste, 'brett_a' med brett representert med matriser,
 til den spesifike tag-en med id 'section'.
 */
 function loadBrett(section, brett_a) {
-    var brett = brett_a[0];
+    var brett = brett_a[1];
     var brett_section = document.createElement('canvas');
     var ctx = brett_section.getContext('2d');
     ctx.clearRect(0, 0, 208, 208);
     brett_section.width = 208;
     brett_section.height = 208;
     brett_section.className = 'brett_section';
+    brett_section.title = "Trykk for å spille av animasjon.\n(original images by Wikipedia user Cburnett)";
 
     var background = new Image();
     background.className = 'brett';
@@ -302,7 +317,7 @@ function loadBrett(section, brett_a) {
     }
 
     brett_section.addEventListener('click', function() {
-       animated(this, brett_a, 0);
+       animated(this, brett_a, 1);
     });
     document.getElementById(section).appendChild(brett_section);
 }
@@ -315,6 +330,11 @@ Det rekursive kallet vil stoppe n�r dypden er lik antall
 elementer i 'brett_a'.
  */
 function animated(self, brett_a, step) {
+    if (step == 1 && brett_a[0]) {
+        return;
+    }
+    brett_a[0] = (step != brett_a.length - 1);
+    console.log(brett_a[0]);
     var ctx = self.getContext('2d');
     var brett = brett_a[step];
     var background = new Image();
